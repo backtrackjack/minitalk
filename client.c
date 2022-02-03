@@ -6,12 +6,12 @@
 /*   By: jsellars <jsellars@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:54:40 by jsellars          #+#    #+#             */
-/*   Updated: 2022/02/03 17:07:17 by jsellars         ###   ########.fr       */
+/*   Updated: 2022/02/03 21:39:53 by jsellars         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<signal.h>
-#include"libft/libft.h"
+#include <signal.h>
+#include "libft/libft.h"
 
 static void	send(int pid, char *str)
 {
@@ -42,7 +42,10 @@ static void	send(int pid, char *str)
 int	main(int ac, char **av)
 {
 	if (ac != 3)
-		ft_putstr_fd("ac no 3\n", 1);
+	{
+		ft_putstr_fd("too many or not enough args\n", 1);
+		return (1);
+	}
 	send(ft_atoi(av[1]), av[2]);
 	return (0);
 }
