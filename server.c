@@ -6,7 +6,7 @@
 /*   By: jsellars <jsellars@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:54:29 by jsellars          #+#    #+#             */
-/*   Updated: 2022/02/03 21:48:21 by jsellars         ###   ########.fr       */
+/*   Updated: 2022/02/07 15:55:14 by jsellars         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ static void	handler(int sig)
 	{
 		i = 0;
 		if (!c)
-		{
 			return ;
-		}
 		ft_putchar_fd(c, 1);
 		c = 0;
 	}
